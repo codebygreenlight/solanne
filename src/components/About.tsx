@@ -2,52 +2,58 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-20 bg-gray-50">
-      <div className="max-w-[100vw] mx-auto px-4 md:px-8 lg:px-12">
+    <section id="about" className="relative py-20 overflow-hidden">
+      {/* Background with Gradient and Blurred Circles */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-amber-50/50 to-white"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-block px-6 py-2 bg-amber-400/10 rounded-full text-amber-400 font-medium mb-6">
+            About Us
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Our Story
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Discover the journey behind our passion for creating timeless pieces that blend elegance with modern design.
+          </p>
+        </div>
+
+        {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Image Section */}
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/20 to-transparent rounded-lg"></div>
+          {/* Image */}
+          <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden group">
             <img
-              src="/IMG_9851.jpg"
-              alt="About Bijouxaccessories"
-              className="w-full h-[500px] object-cover rounded-lg shadow-xl transform transition-all duration-700 group-hover:scale-[1.02]"
+              src="/2.jpg"
+              alt="About Solanne Watches"
+              className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <p className="text-lg font-medium">Crafting Excellence Since 2023</p>
+            </div>
           </div>
 
-          {/* Content Section */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-                About Us
-              </h2>
-              <div className="w-20 h-1 bg-gray-900"></div>
-            </div>
-            
-            <div className="space-y-6 text-gray-700">
-              <p className="text-lg leading-relaxed">
-              At Bijouxaccessories, we believe a wristwatch is more than just a timekeeper—it's a statement of style, confidence, and individuality. That's why we offer a thoughtfully curated collection of high-quality men’s wristwatches designed to elevate your look, whether you're closing deals in the boardroom or enjoying a laid-back weekend.
-              </p>
-              
-              <p className="text-lg leading-relaxed">
-              Our mission is simple: to help modern men express their unique style through timepieces that embody elegance, durability, and affordability. Each watch in our collection is handpicked for its blend of classic craftsmanship and contemporary design, ensuring you always make the right impression.
-              </p>
-              
-              <p className="text-lg leading-relaxed">
-              We’re proud to serve a growing community of style-conscious men who value detail, quality, and authenticity. With Bijouxaccessories, you're not just wearing a watch—you’re wearing confidence.
-              </p>
-            </div>
+          {/* Content Cards */}
+          <div className="space-y-8 text-center md:text-left">
+            <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Timeless Style, Affordable Luxury</h3>
+              <p className="text-gray-600">
+              <span className="font-bold">Solanne Watches Nigeria</span> is a proudly Nigerian fashion and accessories brand committed to elevating everyday style through timeless pieces. Founded in 2022 and officially registered with the Corporate Affairs Commission (CAC) in 2023, we have quickly become a trusted name among fashion-conscious men and women—especially across Lagos.
 
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <span className="text-lg font-medium text-gray-900">Quality Guaranteed</span>
+At Solanne, we believe that luxury should be accessible. That’s why we offer a wide range of affordable and premium wristwatches and non-tarnish, gold-plated jewelry tailored to suit every budget and personal style.
+              </p>
             </div>
           </div>
         </div>
+
+        {/* Quality Badge */}
+        
       </div>
     </section>
   );

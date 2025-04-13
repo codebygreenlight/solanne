@@ -4,27 +4,27 @@ const Gallery: React.FC = () => {
   const products = [
     {
       id: 1,
-      image: '/IMG_9851.jpg',
+      image: '/IMG_9112.jpeg',
     },
     {
       id: 2,
-      image: '/IMG_9852.jpg',
+      image: '/IMG_9150.jpeg',
     },
     {
       id: 3,
-      image: '/IMG_9853.jpg',
+      image: '/IMG_9087.jpeg',
     },
     {
       id: 4,
-      image: '/IMG_9854.jpg',
+      image: '/IMG_8956.jpeg',
     },
     {
       id: 5,
-      image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      image: '/IMG_8080.jpeg',
     },
     {
       id: 6,
-      image: '/IMG_9855.jpg',
+      image: '/IMG_9851.jpg',
     },
   ];
 
