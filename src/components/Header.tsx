@@ -67,41 +67,39 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden fixed transition-all duration-300 ease-in-out ${
-            isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+          className={`md:hidden fixed top-20 left-0 w-full h-[calc(100vh-5rem)] bg-white transform transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="fixed inset-0 bg-white">
-            <div className="flex flex-col space-y-4 p-4">
-              <a
-                href="#home"
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Home
-              </a>
-              <a
-                href="#about"
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </a>
-              <a
-                href="#gallery"
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Gallery
-              </a>
-              <a
-                href="#contact"
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </a>
-            </div>
+          <div className="flex flex-col space-y-6 p-6">
+            <a
+              href="#home"
+              className="text-lg text-gray-600 hover:text-gray-900 transition-colors duration-300 py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </a>
+            <a
+              href="#about"
+              className="text-lg text-gray-600 hover:text-gray-900 transition-colors duration-300 py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
+            </a>
+            <a
+              href="#gallery"
+              className="text-lg text-gray-600 hover:text-gray-900 transition-colors duration-300 py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Gallery
+            </a>
+            <a
+              href="#contact"
+              className="text-lg text-gray-600 hover:text-gray-900 transition-colors duration-300 py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </a>
           </div>
         </div>
       </div>
