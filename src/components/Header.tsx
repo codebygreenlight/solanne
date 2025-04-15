@@ -85,48 +85,52 @@ const Header: React.FC = () => {
         ></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <div 
-            className={`bg-white/95 backdrop-blur-md rounded-2xl p-8 w-full max-w-sm transform transition-all duration-500 ${
+            className={`bg-white/95 backdrop-blur-md rounded-2xl p-8 w-full max-w-sm mx-4 transform transition-all duration-500 ${
               isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
             }`}
             onClick={(e) => e.stopPropagation()}
+            style={{ marginTop: '40vh' }}
           >
-            <div className="flex flex-col items-center space-y-6">
+            {/* Close Button */}
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="absolute top-4 right-4 text-gray-700 hover:text-amber-400 focus:outline-none"
+              aria-label="Close menu"
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Menu Items */}
+            <div className="flex flex-col items-center justify-center space-y-6 mt-8">
               <a
                 href="#home"
-                className="text-gray-900 hover:text-amber-400 transition-colors duration-300 text-lg font-medium"
+                className="block px-6 py-3 text-gray-900 hover:text-amber-400 hover:bg-amber-50 rounded-lg transition-all duration-300 text-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </a>
               <a
                 href="#about"
-                className="text-gray-900 hover:text-amber-400 transition-colors duration-300 text-lg font-medium"
+                className="block px-6 py-3 text-gray-900 hover:text-amber-400 hover:bg-amber-50 rounded-lg transition-all duration-300 text-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </a>
               <a
                 href="#gallery"
-                className="text-gray-900 hover:text-amber-400 transition-colors duration-300 text-lg font-medium"
+                className="block px-6 py-3 text-gray-900 hover:text-amber-400 hover:bg-amber-50 rounded-lg transition-all duration-300 text-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Gallery
               </a>
               <a
                 href="#contact"
-                className="text-gray-900 hover:text-amber-400 transition-colors duration-300 text-lg font-medium"
+                className="block px-6 py-3 text-gray-900 hover:text-amber-400 hover:bg-amber-50 rounded-lg transition-all duration-300 text-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </a>
-              <a
-                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-900 hover:text-amber-400 transition-colors duration-300 text-lg font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                WhatsApp
               </a>
             </div>
           </div>
