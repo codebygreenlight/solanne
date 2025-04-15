@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const phoneNumber = '07013226480';
-  const message = 'Hello, I would like to inquire about your watches.';
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg">
